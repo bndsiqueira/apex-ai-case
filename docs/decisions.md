@@ -20,7 +20,7 @@ Supabase gave us realtime for free. On AWS we had to build it. The WebSocket cou
 
 ## Replace database cron with EventBridge Scheduler
 
-The old jobs ran inside the database and carried credentials in their commands.
+The old jobs ran inside the database, where they were hard to review and to deploy.
 
 **Decision:** each job became a schedule that calls a Lambda through IAM.
 
